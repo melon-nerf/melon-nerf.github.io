@@ -62,7 +62,7 @@
                     <span class="author-block">
                       <a href="https://www.computationalimaging.org/" target="">Gordon Wetzstein</a><sup>1</sup>,</span>
                       <span class="author-block">
-                        <a href="https://scholar.google.com/citations?user=sY8lt7AAAAAJ&hl=en" target="">Dmitry Lagun</a><sup>2</sup>,</span>
+                        <a href="https://scholar.google.com/citations?user=sY8lt7AAAAAJ&hl=en" target="">Dmitry Lagun</a><sup>2</sup></span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
@@ -158,6 +158,115 @@
 </section>
 <!-- End paper abstract -->
 
+<!--<section class="hero is-small">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container">-->
+<!--      <div class="item">-->
+<!--        <img src="static/images/teaser.png" alt="teaser" class="center">-->
+<!--        <div class="content has-text-justified">-->
+<!--          <p>-->
+<!--          MELON infers a neural radiance field from an object-centered dataset. A dataset-specific encoder maps each image to a predicted pose R. Given an equivalence relation in camera space, we render rays from all the poses in the equivalence class [R]. The modulo loss only penalizes the smallest L2 distance from the ground truth color. At evaluation time, the neural field can be used to generate novel views.-->
+<!--        </p>-->
+<!--  </div>-->
+<!--  </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Methods</h2>
+        <img src="static/images/teaser.png" alt="teaser" class="center">
+        <div class="content has-text-justified">
+          <p>
+            MELON infers a neural radiance field from an object-centered dataset. A dataset-specific encoder maps each image to a predicted pose R. Given an equivalence relation in camera space, we render rays from all the poses in the equivalence class [R]. The modulo loss only penalizes the smallest L2 distance from the ground truth color. At evaluation time, the neural field can be used to generate novel views.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results</h2>
+        <h3 class="title is-4">NeRF with Unposed Images</h3>
+      </div>
+    </div>
+    <img src="static/images/ab_initio_big.png" alt="results" class="center">
+    <div id="results-carousel" class="carousel results-carousel">
+      <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/carousel1.jpg" alt="Lego scene" class="center"/>
+      </div>
+      <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/carousel2.jpg" alt="Hotdog scene" class="center"/>
+      </div>
+      <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/carousel3.jpg" alt="Chair scene" class="center"/>
+      </div>
+      <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/carousel4.jpg" alt="Ship scene" class="center"/>
+      </div>
+      <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/carousel5.jpg" alt="Materials scene" class="center"/>
+      </div>
+    </div>
+
+    <br><br><br>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h3 class="title is-4">Reconstruction from Small Datasets</h3>
+      </div>
+    </div>
+    <img src="static/images/num_views.png" alt="results" class="center">
+<!--    <div class="columns is-centered has-text-centered">-->
+<!--      <br>Qualitative reconstructions for various numbers of training views on the "lego" scene.-->
+<!--    </div>-->
+
+    <br><br><br>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h3 class="title is-4">Reconstruction from Noisy Datasets</h3>
+      </div>
+    </div>
+    <img src="static/images/noise_sweep.png" alt="results" class="center-small">
+<!--    <div class="columns is-centered has-text-centered">-->
+<!--      <br>Novel view synthesis from noisy unposed images and mean angular error on the training set (128x128).-->
+<!--    </div>-->
+  </div>
+</section>
+
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">One-dimensional Toy Problem</h2>
+        <img src="static/images/method_1d_labeled.png" alt="one dimensional toy problem" class="center-small">
+        <div class="columns is-centered has-text-justified">
+            <br>We are given a set of crops from an unknown 1D function. The goal is to recover the function (and the angles) given the crops.<br><br>
+        </div>
+        <img src="static/images/torus_results_supp.png" alt="one dimensional toy results qualitative" class="center-small">
+        <div class="columns is-centered has-text-justified">
+            <br>Example of ground truth functions and 1D reconstructions.<br><br>
+        </div>
+        <img src="static/images/torus_results.png" alt="one dimensional toy results quantitative" class="center">
+        <div class="columns is-centered has-text-justified">
+            <br>Angular and reconstruction error for the 1D datasets. We indicate the mean, min and max errors obtained throughout 10 experiments. The explicit representation gets stuck at an early stage. The modulo loss helps the model avoiding local minima and the encoder regularizes the angular prediction.<br><br>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Image carousel -->
 <!--<section class="hero is-small">-->
