@@ -177,11 +177,16 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Methods</h2>
+        <div class="content has-text-justified">
+          Our method simultaneously trains a CNN encoder that maps images to camera pose in SO(3), and a neural radiance field of the scene.
+          MELON does not require CNN pre-training, and is able to infer camera pose in object centered configurations entirely "ab-initio", without any pose initialization whatsoever.
+          To cope with the presence of local minima in the low-dimensional latent space SO(3), we introduce a novel <i>modulo loss</i> that replicates the encoder pose output and only backpropagates the view with the lowest photometric error.
+          We formalize this replication with an equivalence relation <i>R</i> defined in the space of camera parameters, and show this enables the encoder to operate in the quotient set of the camera space for the relation <i>R</i>, enhancing convergence.
+          We introduce a one-dimensional toy problem that mimics the challenges posed by 3D inverse rendering to better illustrate our method.
+        </div>
         <img src="static/images/teaser.png" alt="teaser" class="center">
         <div class="content has-text-justified">
-          <p>
             MELON infers a neural radiance field from an object-centered dataset. A dataset-specific encoder maps each image to a predicted pose R. Given an equivalence relation in camera space, we render rays from all the poses in the equivalence class [R]. The modulo loss only penalizes the smallest L2 distance from the ground truth color. At evaluation time, the neural field can be used to generate novel views.
-          </p>
         </div>
       </div>
     </div>
@@ -257,7 +262,7 @@
         </div>
         <img src="static/images/torus_results_supp.png" alt="one dimensional toy results qualitative" class="center-small">
         <div class="columns is-centered has-text-justified">
-            <br>Example of ground truth functions and 1D reconstructions.<br><br>
+            <br>Example of ground truth function and 1D reconstructions.<br><br>
         </div>
         <img src="static/images/torus_results.png" alt="one dimensional toy results quantitative" class="center">
         <div class="columns is-centered has-text-justified">
@@ -388,11 +393,11 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@article{levy2022melon,
+      <pre><code>@article{levy2023melon,
   author    = {Levy, Axel and Matthews, Mark and Sela, Matan and Wetzstein, Gordon and Lagun, Dmitry},
   title     = {{MELON}: NeRF with Unposed Images Using Equivalence Class Estimation},
   journal   = {arXiv:preprint},
-  year      = {2022},
+  year      = {2023},
 }</code></pre>
     </div>
 </section>
