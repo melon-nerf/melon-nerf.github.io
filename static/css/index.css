@@ -149,3 +149,61 @@ body {
 }
 
 
+#wrapper {
+    width: 800px;
+    height: auto;
+    margin: 0 auto;
+}
+#home1 {
+    height: 200px;
+    float: left;
+}
+
+#home2 {
+    height: 200px;
+    float: left;
+}
+
+#home3 {
+    height: 200px;
+    float: left;
+}
+
+#home4 {
+    height: 200px;
+    float: left;
+}
+
+.clear{
+    clear: both;
+}
+
+@media (max-width:400px) {
+    #wrapper{
+        width: 50%;
+        height: auto;
+    }
+    #home1 {
+        width: 100%;
+        height: auto;
+        float: none;
+    }
+    #home2 {
+        width: 100%;
+        height: auto;
+        float: none;
+    }
+
+    #home3 {
+        width: 100%;
+        height: auto;
+        float: none;
+    }
+
+    #home4 {
+        width: 100%;
+        height: auto;
+        float: none;
+    }
+}
+
