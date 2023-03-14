@@ -188,8 +188,6 @@
           MELON simultaneously trains a CNN encoder that maps images to camera pose in SO(3), and a neural radiance field of the scene.
           It does not require CNN pre-training, and is able to infer camera pose in object centered configurations entirely "ab-initio", without any pose initialization whatsoever.
           To cope with the presence of local minima in the low-dimensional latent space SO(3), we introduce a novel <i>modulo loss</i> that replicates the encoder pose output and only backpropagates the view with the lowest photometric error.
-          We formalize this replication with an equivalence relation <i>R</i> defined in the space of camera parameters, and show this enables the encoder to operate in the quotient set of the camera space for the relation <i>R</i>, enhancing convergence.
-          We introduce a one-dimensional toy problem that mimics the challenges posed by 3D inverse rendering to better illustrate our method.
         </div>
 
 <!--        <div class="content has-text-justified">-->
