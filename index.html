@@ -259,7 +259,15 @@
         <h3 class="title is-4">Reconstruction from Small Datasets</h3>
         <img src="static/images/num_views.png" alt="results" class="center">
         <div class="content has-text-centered">
-          <br>Contrary to adversarial approaches, our method works on datasets containing few images.
+          <br>Contrary to adversarial approaches, our method works on datasets containing few images. "GT+NeRF" trains a NeRF with ground truth camera poses.
+        </div>
+
+        <h3 class="title is-4">Real Datasets</h3>
+        <img src="static/images/nerf_in_the_wild_small.png" alt="results" class="center">
+        <div class="content has-text-centered">
+          <br>Ab initio reconstruction on real datasets.
+          All the methods use ground truth values for the object-to-camera distances and in-plane camera translations.
+          SAMURAI* uses a fixed initialization of the poses at the North pole.
         </div>
 
         <h3 class="title is-4">Reconstruction from Noisy Datasets</h3>
